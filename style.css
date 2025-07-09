@@ -109,7 +109,7 @@ body {
   height: 40vh;
   width: 70vw;
 
-  margin: 2% auto; /* centers the div horizontally */
+  margin: 4% auto; /* centers the div horizontally */
   text-align: center; /* centers the text inside */
 }
 
