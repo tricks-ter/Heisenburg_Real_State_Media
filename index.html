@@ -1,74 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Heisenburg</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
-<section class="hero">
+
   <header class="navbar">
     <div class="navbar-container">
-      <a href="#" class="logo">Heisenburg <br> <p id="agency">Real Estate Media Lab </p> </a>
-      
+      <a href="#" class="logo">
+        <span class="full-text">
+          Heisenburg's <br><span id="agency">Real Estate Media Lab</span>
+        </span>
+        <span class="compact-text">H</span>
+      </a>
       <nav class="nav-links" id="navLinks">
         <a href="#testimonial">Review</a>
         <a href="#work">Work</a>
         <a href="#case-study">Case Study</a>
         <a href="#process">Process</a>
-        <a href="#book-a-call" class="cta">Book a Call</a>
       </nav>
+      <a href="#book-a-call" class="cta">Book a Call</a>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
   </header>
 
+  <section class="hero">
     <div class="hero_memo">
-      <h1 class="hero_title" >Transform Your Real Estate Property <br> into Visual Masterpiece</h1> <br>
-      <p class="hero_para">We help real estate Agencies and Media Companies Sell <br> Properties Faster with Unforgetable Visual Content</p>
+      <h1 class="hero_title">Transform Your Real Estate Property <br> into Visual Masterpiece</h1>
+      <p class="hero_para">We help real estate Agencies and Media Companies Sell <br> Properties Faster with Unforgettable Visual Content</p>
 
-    <div class="trust-row">
-
-      <div class="circle-row">
-        <div class="circle dark-gray"></div>
-        <div class="circle gray"></div>
-        <div class="circle orange"></div>
-        <div class="circle cobalt-blue"></div>
-        <div class="circle violet"></div>
-        <div class="circle aqua-blue"></div>
+      <div class="trust-row">
+        <div class="circle-row">
+          <div class="circle dark-gray"></div>
+          <div class="circle gray"></div>
+          <div class="circle orange"></div>
+          <div class="circle cobalt-blue"></div>
+          <div class="circle violet"></div>
+          <div class="circle aqua-blue"></div>
+        </div>
+        <div class="trust-text">
+          <p>Trusted by 50+ Real Estate Agencies & Media Companies</p>
+          <p>Our client speaks for us</p>
+        </div>
       </div>
 
-    <div class="trust-text">
-      <p>Trusted by 50+ Real Estate Agencies & Media Companies</p>
-      <p>Our client speaks for us</p>
+      <div class="hero-buttons">
+        <a href="#book-a-call" class="hero-btn primary-btn">Book a Call</a>
+        <a href="#get-free-trial" class="hero-btn secondary-btn">Get Free Trial</a>
+      </div>
     </div>
+  </section>
 
+  <section class="video-section">
+    <div class="video-billboard fade-in-section">
+      <div class="billboard-frame">
+        <div class="billboard-header">
+          <div class="billboard-title">Heisenburg's Real Estate Media Lab</div>
+          <div class="billboard-controls">
+            <span class="control-dot red"></span>
+            <span class="control-dot yellow"></span>
+            <span class="control-dot green"></span>
+          </div>
+        </div>
+        
+        <div class="video-container">
+          <div class="video-frame">
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls id="customVideo" poster="" preload="metadata"></video>
+            <div class="custom-play-button" id="playButton"></div>
+            <div class="video-label-inside">
+              Heisenburg's <br> Real Estate Media Lab
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
+  <script>
+    // Scroll handler for navbar
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
+    // Initial animations
+    window.addEventListener('DOMContentLoaded', () => {
+      const title = document.querySelector('.hero_title');
+      setTimeout(() => {
+        title.classList.add('animate-in');
+      }, 200);
+    });
 
-    </div>
+    // Menu toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
 
+    // Video play button
+    const playBtn = document.getElementById("playButton");
+    const video = document.getElementById("customVideo");
 
+    playBtn.addEventListener("click", () => {
+      video.play();
+      playBtn.style.display = "none";
+    });
 
-</section>
+    // Show play button when video is paused
+    video.addEventListener("pause", () => {
+      playBtn.style.display = "flex";
+    });
 
-<section class=""></section>
+    // Hide play button when video starts playing
+    video.addEventListener("play", () => {
+      playBtn.style.display = "none";
+    });
 
+    // Scroll-based fade-in
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    }, {
+      threshold: 0.2,
+    });
 
+    document.querySelectorAll('.fade-in-section').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
-<script>
- 
-  window.addEventListener('DOMContentLoaded', () => {
-    const title = document.querySelector('.hero_title');
-    setTimeout(() => {
-      title.classList.add('animate-in');
-    }, 200); // slight delay to ensure DOM is painted
-  });
-
-
-
-</script>
 </html>
