@@ -12,6 +12,18 @@ body, html {
   overflow-x: hidden;
 }
 
+/* Starfield canvas - must be visible & correctly layered */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+
 /* === Navbar === */
 .navbar {
   width: 90%;
