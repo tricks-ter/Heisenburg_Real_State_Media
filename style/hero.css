@@ -1,0 +1,108 @@
+
+/* === Hero Section === */
+.hero {
+  padding-top: 160px;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.hero_memo {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero_title {
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero_title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero_para {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+
+/* === Trust Row === */
+.trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.circle-row {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 15.5px;
+  height: 15.5px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  margin-left: -7px;
+}
+
+.circle:first-child {
+  margin-left: 0;
+}
+
+/* Colors */
+.dark-gray { background-color: #2a2a2a; }
+.gray { background-color: #777; }
+.orange { background-color: #ff9800; }
+.cobalt-blue { background-color: #0047ab; }
+.violet { background-color: #8a2be2; }
+.aqua-blue { background-color: #00ffff; }
+
+.trust-text {
+  font-size: 0.95rem;
+  color: #ccc;
+  justify-content: left;
+}
+
+/* === Buttons === */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+  background-color: rgba(47, 188, 243, 0.856);
+  color: white;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(47, 188, 243, 0.856);
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

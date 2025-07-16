@@ -1,0 +1,204 @@
+
+/* === Navbar === */
+.navbar {
+  width: 90%;
+  margin: 0 auto;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #111;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  transition: all 0.4s ease;
+}
+
+/* Logo with full text and compact text */
+.logo {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  user-select: none;
+  transition: all 0.4s ease;
+}
+
+/* Full text shown by default */
+.logo .compact-text {
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
+
+.logo .full-text {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.4s ease;
+}
+
+/* Agency subtext */
+#agency {
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: block;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  transition: all 0.4s ease;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background: #222;
+}
+
+/* Book a Call button - regular navbar */
+.cta {
+  background: linear-gradient(135deg, #2fbcf3, #1e9fd8);
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(47, 188, 243, 0.3);
+}
+
+.cta:hover {
+  background: linear-gradient(135deg, #1e9fd8, #2fbcf3);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(47, 188, 243, 0.4);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+
+
+/* === Navbar scrolled / compact styles === */
+.navbar.scrolled {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  min-width: 600px;
+  max-width: 800px;
+  background: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.navbar.scrolled .navbar-container {
+  padding: 8px 8px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hide full logo text, show compact "H" */
+.navbar.scrolled .logo .full-text {
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.navbar.scrolled .logo .compact-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #2fbcf3, #1e9fd8);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white;
+  flex-shrink: 0;
+  user-select: none;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 4px 12px rgba(47, 188, 243, 0.3);
+}
+
+/* Nav links styles when scrolled - positioned in the middle */
+.navbar.scrolled .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar.scrolled .nav-links a {
+  padding: 0 16px;
+  font-size: 0.9rem;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-radius: 22px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar.scrolled .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Book a Call button when scrolled - positioned at the very right */
+.navbar.scrolled .cta {
+  padding: 0 20px;
+  height: 44px;
+  border-radius: 22px;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #2fbcf3, #1e9fd8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(47, 188, 243, 0.3);
+  position: relative;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar.scrolled .cta:hover {
+  background: linear-gradient(135deg, #1e9fd8, #2fbcf3);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(47, 188, 243, 0.4);
+}

@@ -1,0 +1,152 @@
+.testimonial-section {
+  padding: 60px 20px;
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.testimonial-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.testimonial-counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.corner-img-container {
+  width: 100px;
+}
+
+.corner-img {
+  width: 100%;
+  max-width: 80px;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.counter-box .counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ccff;
+}
+
+.label {
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+.sub-label {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.testimonial-carousel {
+  margin-top: 60px;
+}
+
+.carousel-heading {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.carousel-subheading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.carousel-subheading span {
+  color: white;
+}
+
+.carousel-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.carousel-arrow {
+  font-size: 2rem;
+  background: none;
+  color: #00ccff;
+  border: none;
+  cursor: pointer;
+}
+
+.video-phone-frame {
+  border: 2px solid #00ccff;
+  border-radius: 30px;
+  padding: 10px;
+  width: 200px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-phone-frame video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+.testimonial-meta {
+  margin-top: 30px;
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.author-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #00ccff;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.role {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
