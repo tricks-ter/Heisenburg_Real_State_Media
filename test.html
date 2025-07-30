@@ -29,8 +29,7 @@
   <!-- Floating Star Background -->
   <canvas id="starfield"></canvas>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
+ <header class="navbar">
     <div class="navbar-container">
       <a href="#" class="logo">
         <span class="full-text">
@@ -38,16 +37,19 @@
         </span>
         <span class="compact-text">H</span>
       </a>
+
       <nav class="nav-links" id="navLinks">
-        <a href="#testimonial">Review</a>
-        <a href="#work">Work</a>
-        <a href="#case-study">Case Study</a>
-        <a href="#process">Process</a>
+        <a href="#featured-projects">Our Work</a>
+        <a href="#services-section">Services</a>
+        <a href="#testimonial-section">Reviews</a>
+        
       </nav>
       <a href="#book-a-call" class="cta">Book a Call</a>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
   </header>
+
+
 
   <!-- HERO -->
   <section class="hero">
@@ -103,36 +105,49 @@
 
 <!-- === Testimonial Counter + Video Section === -->
 <section class="testimonial-section">
-  <div class="testimonial-header">
-    <h2 class="testimonial-title">Tired of slow, generic property videos?</h2>
-    <p class="testimonial-subtitle">Provide your clients with fast, high-quality editing that makes listings stand out.</p>
+  <div class="testimonial-header fade-title">
+  <h2 class="testimonial-title">
+    <span class="line">"Tired of slow, generic property videos?</span>
+  </h2>
+  <h2 class="testimonial-title">
+    <span class="line">Provide your clients with fast, high-quality editing that</span><br>
+    <span class="line">makes listings stand out."</span>
+  </h2>
+</div>
+
+
+  <div class="testimonial-counter-row fade-in-section">
+ <div class="corner-img-container left fade-corner">
+  <img src="./image/left1.avif" alt="Corner Left 1" class="corner-img l1" />
+  <img src="./image/left2.avif" alt="Corner Left 2" class="corner-img l2" />
+</div>
+
+  <div class="counter-box">
+    <div class="counter animated-counter" data-target="200" data-suffix="%"><h2>0%</h2></div>
+    <h3 class="label label-middle">More engagement</h3>
+    <h2 class="sub-label">Viral edits</h2>
   </div>
 
-  <div class="testimonial-counter-row">
-    <div class="corner-img-container left">
-      <img src="./image/left1.avif" alt="Corner Left" class="corner-img" />
-    </div>
-
-    <div class="counter-box">
-      <div class="counter">200%</div>
-      <p class="label">More engagement</p>
-      <small class="sub-label">Viral edits</small>
-    </div>
-    <div class="counter-box">
-      <div class="counter">5X</div>
-      <p class="label">More reach</p>
-      <small class="sub-label">High Impact visibility</small>
-    </div>
-    <div class="counter-box">
-      <div class="counter">50%</div>
-      <p class="label">More Leads</p>
-      <small class="sub-label">Get noticed</small>
-    </div>
-
-    <div class="corner-img-container right">
-      <img src="./image/right1.avif" alt="Corner Right" class="corner-img" />
-    </div>
+  <div class="counter-box">
+    <div class="counter animated-counter" data-target="5" data-suffix="X"><h2>0X</h2></div>
+    <h3 class="label label-middle">More reach</h3>
+    <h2 class="sub-label">High Impact visibility</h2>
   </div>
+
+  <div class="counter-box">
+    <div class="counter animated-counter" data-target="50" data-suffix="%"><h2>0%</h2></div>
+    <h3 class="label label-middle">More Leads</h3>
+    <h2 class="sub-label">Get noticed</h2>
+  </div>
+
+  
+<div class="corner-img-container right fade-corner">
+  <img src="./image/right1.avif" alt="Corner Right 1" class="corner-img r1" />
+  <img src="./image/right2.avif" alt="Corner Right 2" class="corner-img r2" />
+</div>
+
+</div>
+
 
   <div class="testimonial-carousel">
     <h3 class="carousel-heading">Client Testimonials</h3>
@@ -188,77 +203,85 @@
 </section>
 
 <!-- service section-->
-<section class="services-section">
-    <h2 class="section-title">Services</h2>
-    <p class="section-subtitle">
-      High-Quality Real Estate Video Editing at Unbeatable Price
-    </p>
 
-    <div class="service-block">
-      <div class="service-text">
-        <h3>Real Estate Social Media Reels & Agent Property Walkthroughs</h3>
-        <p>Fast, stylish vertical videos perfect for social media, designed to grab attention and boost your marketing.</p>
-        <ul>
-          <li> Fast Turnaround – Delivered within 24-48 hours</li>
-          <li> Unlimited Free Revisions until satisfaction</li>
-          <li> Stunning, Visual-Realistic Quality</li>
-          <li> 100% Customer Satisfaction Guaranteed</li>
-        </ul>
-      </div>
-      <div class="service-video">
-        <div class="video-placeholder">[ Video Placeholder ]</div>
+<section class="services-section" aria-labelledby="services-title">
+  <div class="service-intro">
+    <p class="section-title" id="services-title">Services</p>
+    <h2 class="section-subtitle">
+      <span class="highlight">High-Quality Real Estate Video Editing at Unbeatable Price</span>
+    </h2>
+    <h3 class="service-info">
+      At our company, we provide premium real estate video editing services tailored to your needs. Pricing varies by video type and complexity, ensuring you invest only in what delivers maximum impact. From fast-paced walkthroughs to cinematic tours, our expert editors transform your footage into compelling marketing tools.
+    </h3>
+  </div>
+
+  <article class="service-block " aria-label="Real Estate Social Media Reels and Agent Property Walkthroughs">
+    <div class="service-text">
+      <h3>Real Estate Social Media Reels & Agent Property Walkthroughs</h3>
+      <p>Fast, stylish vertical videos crafted for social media platforms, designed to captivate and boost engagement.</p>
+      <ul>
+        <li>Fast Turnaround – Delivered within 24-48 hours</li>
+        <li>Unlimited Free Revisions until satisfaction</li>
+        <li>Stunning, Visual-Realistic Quality</li>
+        <li>100% Customer Satisfaction Guaranteed</li>
+      </ul>
+    </div>
+    <figure class="service-video">
+      <div class="video-placeholder" role="img" aria-label="Video preview placeholder">[ Video Placeholder ]</div>
+      <figcaption>Example video preview</figcaption>
+    </figure>
+  </article>
+
+  <article class="service-block " aria-label="AI-Powered Real Estate Photos to Video">
+    <div class="service-text">
+      <h3>AI-Powered Real Estate Photos to Video</h3>
+      <p>Transform your property photos into dynamic, engaging videos using our AI-driven editing platform—ideal for clients with limited footage.</p>
+      <ul>
+        <li>AI-powered transformations for stunning videos</li>
+        <li>Fast turnaround – Delivered in 24–48 hours</li>
+        <li>Unlimited revisions to ensure satisfaction</li>
+        <li>Cinematic, high-quality visuals that capture attention</li>
+      </ul>
+    </div>
+    <figure class="service-video">
+      <div class="video-placeholder" role="img" aria-label="AI-powered video example placeholder">[ Video Placeholder ]</div>
+      <figcaption>Sample AI-enhanced video output</figcaption>
+    </figure>
+  </article>
+
+  <article class="service-block " aria-label="Drone Video Editing">
+    <div class="service-text">
+      <h3>Drone Video Editing</h3>
+      <p>Send us your raw aerial drone footage, and we’ll craft a captivating real estate video showcasing your property from breathtaking perspectives.</p>
+      <ul>
+        <li>Fast turnaround – Delivered in 24–48 hours</li>
+        <li>Unlimited revisions to ensure satisfaction</li>
+        <li>High-quality visuals highlighting your property’s best features</li>
+      </ul>
+    </div>
+    <figure class="service-video">
+      <div class="video-placeholder" role="img" aria-label="Drone video example placeholder">[ Video Placeholder ]</div>
+      <figcaption>Drone footage transformation example</figcaption>
+    </figure>
+  </article>
+
+  <article class="service-block " aria-label="Personal Branding Video Editing">
+    <div class="service-text">
+      <h3>Personal Branding Video Editing</h3>
+      <p>Build authority and foster trust by showcasing your personality in compelling real estate videos. Our expert editing helps you connect authentically and boost sales.</p>
+      <div class="bottom-cta">
+        <p class="cta-note">
+          <button class="cta-button" aria-label="Enroll in personal branding video editing service">ENROLL NOW</button> —<span id="quote">bring your vision to life</span>
+        </p>
       </div>
     </div>
+    <figure class="service-video">
+      <div class="video-placeholder" role="img" aria-label="Personal branding video example placeholder">[ Video Placeholder ]</div>
+      <figcaption>Personal branding video sample</figcaption>
+    </figure>
+  </article>
+</section>
 
-    <div class="service-block reverse">
-      <div class="service-text">
-        <h3>AI-Powered Real Estate Photos to Video</h3>
-        <p>Turn your property photos into dynamic, engaging videos using AI-driven editing. Perfect for clients with limited video footage looking to enhance their listings or social media presence.</p>
-        <ul>
-          <li> AI-powered transformations for stunning videos</li>
-          <li> Fast turnaround – Delivered in 24–48 hours</li>
-          <li> Unlimited revisions to ensure satisfaction</li>
-          <li> Cinematic, high-quality visuals that capture attention</li>
-        </ul>
-      </div>
-      <div class="service-video">
-        <div class="video-placeholder">[ Video Placeholder ]</div>
-      </div>
-    </div>
-
-    <div class="service-block">
-      <div class="service-text">
-        <h3>Drone Video Editing</h3>
-        <p>Send us your raw aerial drone footage, and we’ll turn it into a stunning real estate marketing video that showcases your property from a unique perspective.</p>
-        <ul>
-          <li> Fast turnaround – Delivered in 24–48 hours</li>
-          <li> Unlimited revisions to ensure satisfaction</li>
-          <li> High-quality visuals that highlight your property’s best features</li>
-        </ul>
-      </div>
-      <div class="service-video">
-        <div class="video-placeholder">[ Video Placeholder ]</div>
-      </div>
-    </div>
-
-    <div class="service-block reverse">
-      <div class="service-text">
-        <h3>Personal Branding Video Editing</h3>
-        <p>Establish your authority and connect with your audience through our expert personal branding video editing services. Put your voice and face at the forefront of your real estate videos to build trust, establish your credibility, and skyrocket your sales.</p>
-        <br>
-        <div class="bottom-cta">
-      
-      <p class="cta-note"><button class="cta-button">ENROLL NOW</button> -bring your vision to life </p>
-    </div>
-      </div>
-      <div class="service-video">
-        <div class="video-placeholder">[ Video Placeholder ]</div>
-      </div>
-    </div>
-
-    
-    
-  </section>
 
 
 

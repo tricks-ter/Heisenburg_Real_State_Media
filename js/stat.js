@@ -1,4 +1,3 @@
-
 const fadeObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -7,55 +6,54 @@ const fadeObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 
-document.querySelectorAll('.fade-in-section').forEach(el => {
-  fadeObserver.observe(el);
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const el = entry.target;
+    if (entry.isIntersecting && !el.classList.contains("has-counted")) {
+      el.classList.add("has-counted");
+
+      const h2 = el.querySelector("h2");
+      const target = parseInt(el.getAttribute("data-target"));
+      const suffix = el.getAttribute("data-suffix") || '';
+      let current = 0;
+      const step = Math.ceil(target / 100);
+
+      const update = () => {
+        current += step;
+        if (current >= target) {
+          h2.textContent = `${target}${suffix}`;
+          counterObserver.unobserve(el);
+        } else {
+          h2.textContent = `${current}${suffix}`;
+          requestAnimationFrame(update);
+        }
+      };
+      requestAnimationFrame(update);
+    }
+  });
+}, { threshold: 0.3 });
+
+const scrollObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+    }
+  });
+}, { threshold: 0.2 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Observe each animated line in titles
+  document.querySelectorAll('.line').forEach(el => scrollObserver.observe(el));
+
+  // Corner image stack animation
+  document.querySelectorAll('.fade-corner').forEach(el => scrollObserver.observe(el));
+
+  // Fade-in section observer
+  document.querySelectorAll('.fade-in-section').forEach(el => fadeObserver.observe(el));
+
+  // Counter animation
+  document.querySelectorAll('.animated-counter').forEach(el => counterObserver.observe(el));
+
+  // Initialize first testimonial if needed
+  updateTestimonial?.(0);
 });
-
-
-const videos = [
-  {
-    src: './videos/testimonial1.mp4',
-    quote: 'Honestly, they are the best in the game, and I highly recommend',
-    name: 'Chris Bardon',
-    role: 'real estate agent'
-  },
-  {
-    src: './videos/testimonial2.mp4',
-    quote: 'They made our listings go viral with beautiful edits!',
-    name: 'Maria Lopez',
-    role: 'property manager'
-  },
-  {
-    src: './videos/testimonial3.mp4',
-    quote: 'Super fast turnaround and high quality visuals.',
-    name: 'Alan Smith',
-    role: 'media head'
-  }
-];
-
-let currentIndex = 0;
-const videoEl = document.getElementById('testimonialVideo');
-const quoteEl = document.querySelector('.testimonial-quote');
-const nameEl = document.querySelector('.name');
-const roleEl = document.querySelector('.role');
-
-function updateTestimonial(index) {
-  const data = videos[index];
-  videoEl.src = data.src;
-  quoteEl.textContent = `“${data.quote}”`;
-  nameEl.textContent = data.name;
-  roleEl.textContent = data.role;
-}
-
-function nextTestimonial() {
-  currentIndex = (currentIndex + 1) % videos.length;
-  updateTestimonial(currentIndex);
-}
-
-function prevTestimonial() {
-  currentIndex = (currentIndex - 1 + videos.length) % videos.length;
-  updateTestimonial(currentIndex);
-}
-
-// preload and initialize
-document.addEventListener('DOMContentLoaded', () => updateTestimonial(0));
