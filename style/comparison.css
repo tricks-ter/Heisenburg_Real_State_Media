@@ -1,185 +1,127 @@
-.comparison-section {
-  padding: 30px 10px; /* tighter spacing */
-  background: transparent; /* transparent to reveal starfield */
-  color: #e0f7fa; /* lighter cyan tint */
+body {
   font-family: 'Poppins', sans-serif;
-  text-align: center;
+  background: transparent;
+  margin: 0;
+  padding: 40px;
+  color: #fff;
+}
+
+.comparison-section {
+  padding: 50px 20px;
+  background: transparent;
   position: relative;
+  text-align: center;
 }
 
 .comparison-heading .subheading {
   text-transform: uppercase;
   font-size: 12px;
-  color: #aaa; /* softer cyan */
+  color: #ffffff;
   margin-bottom: 4px;
   letter-spacing: 1px;
 }
 
 .comparison-heading .main-heading {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 80px;
-  color: #b3e5fc; /* light blue */
+  line-height: 1.3;
+  margin-bottom: 60px;
+  color: #999;
 }
 
 .comparison-heading span {
-  color: #00bcd4; /* bright cyan */
+  color: #ffffff;
 }
 
 .comparison-columns {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-/* Common Box Styling */
-.comparison-box {
-  background: rgba(0, 0, 0, 0.45); /* slightly lighter for better contrast */
-  padding: 16px 16px;
-  border-radius: 25px;
-  width: 100%;
-  max-width: 400px;
+.card {
+  background: linear-gradient(160deg, #293c47 0%, #294f5c 100%);
+  border-radius: 24px;
+  padding: 30px;
+  width: 30vw;
+  height: 100vh;
   text-align: left;
-  box-shadow: 0 0 10px rgba(0, 188, 212, 0.12);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(0, 188, 212, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
 }
 
-/* Heisenburg box with galaxy gradient and lifted effect */
-.heisenburg-box {
-  position: relative;
-  top: -20px;
-  background: linear-gradient(135deg, #004d66, #006680, #004c66);
-  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.35), 0 0 10px rgba(0, 150, 180, 0.15);
-  border: 1px solid rgba(0, 188, 212, 0.35);
+.card:hover {
+  transform: translateY(-5px);
 }
 
-/* Headings */
-.comparison-box h3 {
-  font-size: 17px;
-  margin-bottom: 12px;
-  color: #e0f7fa; /* lighter cyan */
-}
-
-.comparison-box h3 span {
-  font-size: 13px;
-  display: block;
-  color: #a1cbe6; /* muted cyan */
-}
-
-/* List styling */
-.comparison-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.check-list li::before {
-  content: '✔';
-  color: #00e5ff; /* bright cyan */
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.cross-list li::before {
-  content: '✖';
-  color: #ff8080; /* soft red */
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.comparison-list li {
-  margin-bottom: 8px;
-  font-size: 13px;
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
   line-height: 1.4;
-  color: #a3cde3; /* lighter cyan for text */
 }
 
-/* Bonus Box */
-.bonus-box {
-  background: rgba(0, 101, 110, 0.7);
-  padding: 10px 14px;
-  border-radius: 18px;
-  margin-top: 16px;
+.card p {
+  margin: 14px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e5f4f4;
 }
 
-.bonus-box h4 {
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: #d1f0ff; /* pale cyan */
-}
-
-.bonus-box p {
-  font-size: 12px;
-  color: #b3e5fc; /* pale blue */
-  margin: 2px 0;
-}
-
-.bonus-box p span {
-  color: #00bcd4;
+.check {
+  color: #2ecc71;
   font-weight: bold;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
-.bonus-desc {
-  font-size: 10px;
-  color: #8fcef8; /* light cyan */
-  margin-left: 16px;
+.cross {
+  color: #ff4c4c;
+  font-weight: bold;
+  margin-right: 8px;
 }
 
-/* CTA Button */
-.cta-wrapper {
+.bonus {
+  background: rgba(0, 180, 120, 0.1);
+  padding: 16px;
+  border-radius: 14px;
   margin-top: 24px;
+  font-size: 0.95em;
+}
+
+.bonus p {
+  margin: 8px 0;
+  color: #c7f7e3;
+}
+
+.highlight {
+  color: #00ff99;
+  font-weight: bold;
+}
+
+.cta-wrapper {
+  margin-top: 60px;
+  text-align: center;
 }
 
 .cta-button {
-  background-color: #00bcd4;
-  color: #000;
-  padding: 10px 22px;
+  display: inline-block;
+  padding: 14px 28px;
   border-radius: 30px;
-  text-decoration: none;
+  font-size: 16px;
   font-weight: bold;
-  transition: background 0.3s;
-  font-size: 14px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.right-card {
+  margin-top: 30px;
+  background-color: #ff3700;
 }
 
 .cta-button:hover {
-  background-color: #0097a7;
-}
-
-.cta-button:focus {
-  outline: 3px dashed #00bcd4;
-  outline-offset: 3px;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .comparison-columns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .comparison-box {
-    max-width: 100%;
-  }
-
-  .heisenburg-box {
-    top: 0; /* neutral on small screens */
-  }
-
-  .comparison-heading .main-heading {
-    font-size: 22px;
-  }
-
-  .comparison-box h3 {
-    font-size: 15px;
-  }
-
-  .cta-button {
-    width: 100%;
-    padding: 12px;
-  }
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
 }

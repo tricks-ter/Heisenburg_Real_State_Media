@@ -2,22 +2,27 @@
 .featured-projects {
   padding: 5rem 2rem;
   text-align: center;
-  background: linear-gradient(to bottom, #0e0e0e, #1b1b1b);
+  font-family: 'Poppins', sans-serif;
+
+
 }
 
 .featured-header p {
   font-size: 1rem;
-  color: #aaa;
+  color: white;
 }
 
 .featured-header h2 {
+  color: gray;
   font-size: 2rem;
   margin: 1rem 0;
 }
 
-.featured-header h2 span {
-  color: #2fbcf3;
+.feature-subheading {
+  color: white;
 }
+
+
 
 .featured-tabs {
   margin-top: 1rem;
@@ -56,11 +61,10 @@
 /* === Default Layout (Vertical & Agent tabs) === */
 .featured-content.default-layout .placeholder,
 .featured-content.default-layout .video-wrapper {
-  width: 250px;
-  height: 400px;
+  width: 25vw;
+  height: 80vh;
   border-radius: 16px;
-  background: linear-gradient(145deg, #1d1d1d, #2b2b2b);
-  border: 2px solid #2fbcf3;
+  border: 2px solid transparent;
   transition: all 0.3s;
 }
 
@@ -81,13 +85,13 @@
 }
 
 .featured-content.horizontal-layout .video-wrapper {
-  width: 100%;
-  max-width: 320px;
-  height: 180px;
+  width: 25vw;
+  max-width: 25vw;
+  height: 80vh;
   background: #000;
   border-radius: 12px;
   overflow: hidden;
-  border: 2px solid #2fbcf3;
+  border: 2px solid transparent;
 }
 
 .featured-content.horizontal-layout .video-wrapper video {
@@ -101,7 +105,7 @@
   max-width: 320px;
   height: 180px;
   background: #1a1a1a;
-  border: 2px dashed #1e9fd8;
+  border: 2px dashed transparent;
   border-radius: 12px;
 }
 
@@ -121,12 +125,11 @@
 
 .dual-column .video-wrapper,
 .dual-column .placeholder {
-  width: 480px;
-  height: 240px;
+  width: 40vw;
+  height: 60vh;
   border-radius: 12px;
-  background: linear-gradient(135deg, #2fbcf3, #1e9fd8);
   overflow: hidden;
-  border: 2px solid #fff;
+  border: 2px solid transparent;
 }
 
 .dual-column .video-wrapper video {

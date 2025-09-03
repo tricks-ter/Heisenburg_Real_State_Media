@@ -1,0 +1,274 @@
+.testimonial-section {
+  padding: 60px 20px;
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.testimonial-header h2 {
+  color: #fff9;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.6;
+
+}
+
+.testimonial-subtitle {
+  font-size: 1.5rem;
+  font-weight: 1000;
+  color: white;
+
+}
+
+.testimonial-counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.corner-img-container {
+  width: 200px;
+}
+
+.corner-img {
+  width: 100%;
+  max-width: 200px;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
+
+}
+
+
+
+.counter-box .counter {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #00ccff;
+  margin-bottom: 20PX;
+}
+
+.label {
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.label-middle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  justify-content: right;
+  text-align: right;
+
+
+
+}
+
+.sub-label {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #aaa;
+}
+
+.testimonial-carousel {
+  margin-top: 150px;
+}
+
+.carousel-heading {
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.carousel-subheading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.carousel-subhead {
+  color: white;
+}
+
+.carousel-subheading span {
+  color: white;
+}
+
+.carousel-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.carousel-arrow {
+  font-size: 2rem;
+  background: none;
+  color: #00ccff;
+  border: none;
+  cursor: pointer;
+}
+
+.video-phone-frame {
+  border: 2px solid transparent;
+  border-radius: 30px;
+  width: 20vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-phone-frame video {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.testimonial-meta {
+  margin-top: 30px;
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.author-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #00ccff;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.role {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
+
+.corner-img-container {
+  position: relative;
+  width: 180px;
+  height: 150px;
+}
+
+.corner-img-container.left,
+.corner-img-container.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.corner-img-container.left img,
+.corner-img-container.right img {
+  position: absolute;
+  width: 180px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Stack offset with rotation for left side */
+.corner-img-container.left .l1 {
+  top: 0;
+  left: 0;
+  transform: rotate(10deg) translateY(0);
+  z-index: 2;
+}
+
+.corner-img-container.left .l2 {
+  bottom: 1px;
+  left: 5px;
+  transform: rotate(5deg) translateY(10px);
+  z-index: 1;
+}
+
+/* Stack offset with rotation for right side */
+.corner-img-container.right .r1 {
+  top: 0;
+  right: 0;
+  transform: rotate(-10deg) translateY(0);
+  z-index: 2;
+}
+
+.corner-img-container.right .r2 {
+  bottom: 10px;
+  right: 5px;
+  transform: rotate(-5deg) translateY(10px);
+  z-index: 1;
+}
+
+/* ========== Title Fade-In Line by Line ========== */
+.line {
+  display: inline-block;
+  opacity: 0;
+  color: gray;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.line.in-view {
+  opacity: 1;
+  color: white;
+  transform: translateY(0);
+}
+
+
+/* ========== Initial Forward Position for Images ========== */
+.corner-img-container.left .l1,
+.corner-img-container.left .l2,
+.corner-img-container.right .r1,
+.corner-img-container.right .r2 {
+  transition: transform 1s ease;
+}
+
+.corner-img-container.left .l1,
+.corner-img-container.left .l2 {
+  transform: rotate(10deg) translateX(240px);
+  /* Forward on X-axis */
+}
+
+.corner-img-container.right .r1,
+.corner-img-container.right .r2 {
+  transform: rotate(-10deg) translateX(-240px);
+}
+
+/* ========== Slide Back when in view ========== */
+.fade-corner.in-view .l1 {
+  transform: rotate(10deg) translateX(0);
+}
+
+.fade-corner.in-view .l2 {
+  transform: rotate(5deg) translateX(0);
+}
+
+.fade-corner.in-view .r1 {
+  transform: rotate(-10deg) translateX(0);
+}
+
+.fade-corner.in-view .r2 {
+  transform: rotate(-5deg) translateX(0);
+}
