@@ -1,4 +1,3 @@
-
 /* === Hero Section === */
 .hero {
   padding-top: 160px;
@@ -17,7 +16,8 @@
   font-size: 3rem;
   font-weight: bold;
   opacity: 0;
-  transform: translateY(0); /* No vertical shift */
+  transform: translateY(0);
+  /* No vertical shift */
   white-space: pre-line;
   transition: opacity 0.8s ease;
 }
@@ -50,17 +50,17 @@
 }
 
 .circle {
-  width: 50px; 
+  width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;
-  background-size: cover;   
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin-left: -15px;
   z-index: 3;
-  
+
 }
 
 .circle:first-child {
@@ -68,23 +68,29 @@
 }
 
 /* Colors */
-.dark-gray { background-image: url('../image/1.png');
-   }
-.gray { background-image: url('../image/2.png');
-   }
+.dark-gray {
+  background-image: url('../image/1.png');
+}
+
+.gray {
+  background-image: url('../image/2.png');
+}
+
 .orange {
   background-image: url('../image/3.png');
-  
+
 }
-  
-.violet {background-image: url('../image/4.png');
-   }
-.aqua-blue { background-image: url('../image/5.png');
-   }
+
+.violet {
+  background-image: url('../image/4.png');
+}
+
+.aqua-blue {
+  background-image: url('../image/5.png');
+}
 
 .trust-text {
   font-size: 0.95rem;
-  opacity: 30;
   text-align: justify;
   justify-content: left;
 }

@@ -28,7 +28,7 @@
   font-size: 2rem;
   font-weight: 400;
   padding: auto;
-  color: gray;
+  color: white;
   /* Updated */
   text-align: center;
   margin-bottom: 0.5rem;
@@ -38,7 +38,7 @@
 .section-subtitle {
   padding: auto;
   font-size: 1.68rem;
-  color: white;
+  color: gray;
   text-align: center;
   font-weight: 700;
   line-height: 1.4;
@@ -52,7 +52,7 @@
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  color: gray;
+  color: whitesmoke;
   /* Updated */
 }
 
@@ -136,8 +136,8 @@
 
 /* === VIDEO PLACEHOLDER === */
 .service-video {
-  flex: 1 1.5 250px;
-  min-height: 300px;
+  flex: 1 1 600px;
+  min-height: 400px;
   background-color: #0e0e0e;
   /* Updated */
 
