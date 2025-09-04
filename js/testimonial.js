@@ -4,7 +4,7 @@
 const testimonials = [
     {
         video: "./videos/testimonial1.mp4",
-        quote: "Honestly, they are the best in the game, and I highly recommend.",
+        quote: "Honestly, they are the best in the game, and I love them.",
         name: "Chris Bardon",
         role: "Real Estate Agent",
         pic: "./image/profile1.jpg"
