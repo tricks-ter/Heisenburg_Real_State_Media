@@ -1,27 +1,36 @@
 /* === Base Styles === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body,
 html {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0e0e0e;
-  color: white;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0e0e0e;
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
+
 /* Starfield canvas - must be visible & correctly layered */
+
 #starfield {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #starfield {
+        opacity: 0.5;
+        /* or display: none; if performance is an issue */
+    }
 }

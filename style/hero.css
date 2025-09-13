@@ -1,135 +1,139 @@
 /* === Hero Section === */
+
 .hero {
-  padding-top: 160px;
-  padding-bottom: 60px;
-  width: 100%;
-  z-index: 3;
+    padding-top: 160px;
+    padding-bottom: 60px;
+    width: 100%;
+    z-index: 3;
 }
 
 .hero_memo {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero_title {
-  font-size: 3rem;
-  font-weight: bold;
-  opacity: 0;
-  transform: translateY(0);
-  /* No vertical shift */
-  white-space: pre-line;
-  transition: opacity 0.8s ease;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(0);
+    /* No vertical shift */
+    white-space: pre-line;
+    transition: opacity 0.8s ease;
 }
 
 .hero_title.animate-in {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero_para {
-  font-size: 1.5rem;
-  color: #ccc;
-  margin-top: 10px;
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: 10px;
 }
 
 
 /* === Trust Row === */
+
 .trust-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
 
 .circle-row {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: inline-block;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-left: -15px;
-  z-index: 3;
-
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: -15px;
+    z-index: 3;
 }
 
 .circle:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 
+
 /* Colors */
+
 .dark-gray {
-  background-image: url('../image/1.png');
+    background-image: url('../image/1.png');
 }
 
 .gray {
-  background-image: url('../image/2.png');
+    background-image: url('../image/2.png');
 }
 
 .orange {
-  background-image: url('../image/3.png');
-
+    background-image: url('../image/3.png');
 }
 
 .violet {
-  background-image: url('../image/4.png');
+    background-image: url('../image/4.png');
 }
 
 .aqua-blue {
-  background-image: url('../image/5.png');
+    background-image: url('../image/5.png');
 }
 
 .trust-text {
-  font-size: 0.95rem;
-  text-align: justify;
-  justify-content: left;
+    font-size: 0.95rem;
+    text-align: justify;
+    justify-content: left;
 }
 
+
 /* === Buttons === */
+
 .hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  z-index: 3;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    z-index: 3;
 }
 
 .hero-btn {
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 30px;
-  z-index: 3;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    z-index: 3;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .primary-btn {
-  background-color: rgba(47, 188, 243, 0.856);
-  color: white;
-  z-index: 3;
+    background-color: rgba(47, 188, 243, 0.856);
+    color: white;
+    z-index: 3;
 }
 
 .secondary-btn {
-  background-color: transparent;
-  color: white;
-  border: 2px solid rgba(47, 188, 243, 0.856);
-  z-index: 3;
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(47, 188, 243, 0.856);
+    z-index: 3;
 }
 
 .hero-btn:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-  z-index: 3;
+    transform: scale(1.05);
+    cursor: pointer;
+    z-index: 3;
 }

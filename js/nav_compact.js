@@ -1,25 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar");
-  let lastScrollY = 0;
-  let ticking = false;
+document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.querySelector(".navbar");
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-  function handleScroll() {
-    const currentScrollY = window.scrollY;
+    const SCROLL_THRESHOLD = 80;
+    let isScrolled = false;
 
-    if (currentScrollY > 80) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+        const isDesktop = window.innerWidth > 768;
+
+        if (isDesktop) {
+            if (currentScrollY > SCROLL_THRESHOLD && !isScrolled) {
+                navbar.classList.add("scrolled");
+                isScrolled = true;
+            } else if (currentScrollY <= SCROLL_THRESHOLD && isScrolled) {
+                navbar.classList.remove("scrolled");
+                isScrolled = false;
+            }
+        } else {
+            if (isScrolled) {
+                navbar.classList.remove("scrolled");
+                isScrolled = false;
+            }
+        }
     }
 
-    lastScrollY = currentScrollY;
-    ticking = false;
-  }
+    window.addEventListener("scroll", () => window.requestAnimationFrame(handleScroll));
+    window.addEventListener("resize", handleScroll);
+    handleScroll(); // run on load
 
-  window.addEventListener("scroll", function () {
-    if (!ticking) {
-      window.requestAnimationFrame(handleScroll);
-      ticking = true;
+    // Hamburger toggle with slide animation
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        // Close menu on link click
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => navLinks.classList.remove("active"));
+        });
     }
-  });
 });
