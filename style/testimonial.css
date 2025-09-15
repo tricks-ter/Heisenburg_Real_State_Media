@@ -1,274 +1,344 @@
-.testimonial-section {
-  padding: 60px 20px;
-  background-color: #0d0d0d;
-  color: white;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
+/* ================= Base Styles ================= */
 
+.testimonial-section {
+    padding: 60px 20px;
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .testimonial-header h2 {
-  color: #fff9;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1.6;
-
+    color: #fff9;
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .testimonial-subtitle {
-  font-size: 1.5rem;
-  font-weight: 1000;
-  color: white;
-
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: white;
 }
 
 .testimonial-counter-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
+
+/* ================= Corner Images ================= */
+
 .corner-img-container {
-  width: 200px;
+    position: relative;
+    width: 180px;
+    height: 150px;
 }
 
 .corner-img {
-  width: 100%;
-  max-width: 200px;
-  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
-
+    width: 100%;
+    max-width: 200px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
+    transition: transform 0.6s ease;
 }
 
-
-
-.counter-box .counter {
-  font-size: 2.3rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 20PX;
-}
-
-.label {
-  font-size: 1rem;
-  color: white;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.label-middle {
-  font-size: 1.1rem;
-  font-weight: bold;
-  justify-content: right;
-  text-align: right;
-
-
-
-}
-
-.sub-label {
-  font-size: 1.6rem;
-  font-weight: bolder;
-  color: #aaa;
-}
-
-.testimonial-carousel {
-  margin-top: 150px;
-}
-
-.carousel-heading {
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.carousel-subheading {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: gray;
-  margin-bottom: 30px;
-}
-
-.carousel-subhead {
-  color: white;
-}
-
-.carousel-subheading span {
-  color: white;
-}
-
-.carousel-frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-
-.carousel-arrow {
-  font-size: 2rem;
-  background: none;
-  color: #00ccff;
-  border: none;
-  cursor: pointer;
-}
-
-.video-phone-frame {
-  border: 2px solid transparent;
-  border-radius: 30px;
-  width: 20vw;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.video-phone-frame video {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-.testimonial-meta {
-  margin-top: 30px;
-}
-
-.testimonial-quote {
-  font-size: 0.95rem;
-  font-style: italic;
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.author-dot {
-  width: 16px;
-  height: 16px;
-  background-color: #00ccff;
-  border-radius: 50%;
-}
-
-.name {
-  font-weight: 600;
-  margin: 0;
-}
-
-.role {
-  font-size: 0.75rem;
-  color: #888;
-  margin: 0;
-}
-
-.corner-img-container {
-  position: relative;
-  width: 180px;
-  height: 150px;
-}
-
-.corner-img-container.left,
-.corner-img-container.right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.corner-img-container.left img,
-.corner-img-container.right img {
-  position: absolute;
-  width: 180px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Stack offset with rotation for left side */
 .corner-img-container.left .l1 {
-  top: 0;
-  left: 0;
-  transform: rotate(10deg) translateY(0);
-  z-index: 2;
+    top: 0;
+    left: 0;
+    transform: rotate(10deg) translateX(240px);
+    z-index: 2;
 }
 
 .corner-img-container.left .l2 {
-  bottom: 1px;
-  left: 5px;
-  transform: rotate(5deg) translateY(10px);
-  z-index: 1;
+    bottom: 1px;
+    left: 5px;
+    transform: rotate(5deg) translateX(240px);
+    z-index: 1;
 }
 
-/* Stack offset with rotation for right side */
 .corner-img-container.right .r1 {
-  top: 0;
-  right: 0;
-  transform: rotate(-10deg) translateY(0);
-  z-index: 2;
+    top: 0;
+    right: 0;
+    transform: rotate(-10deg) translateX(-240px);
+    z-index: 2;
 }
 
 .corner-img-container.right .r2 {
-  bottom: 10px;
-  right: 5px;
-  transform: rotate(-5deg) translateY(10px);
-  z-index: 1;
-}
-
-/* ========== Title Fade-In Line by Line ========== */
-.line {
-  display: inline-block;
-  opacity: 0;
-  color: gray;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.line.in-view {
-  opacity: 1;
-  color: white;
-  transform: translateY(0);
+    bottom: 10px;
+    right: 5px;
+    transform: rotate(-5deg) translateX(-240px);
+    z-index: 1;
 }
 
 
-/* ========== Initial Forward Position for Images ========== */
-.corner-img-container.left .l1,
-.corner-img-container.left .l2,
-.corner-img-container.right .r1,
-.corner-img-container.right .r2 {
-  transition: transform 1s ease;
-}
+/* Animate back when visible */
 
-.corner-img-container.left .l1,
-.corner-img-container.left .l2 {
-  transform: rotate(10deg) translateX(240px);
-  /* Forward on X-axis */
-}
-
-.corner-img-container.right .r1,
-.corner-img-container.right .r2 {
-  transform: rotate(-10deg) translateX(-240px);
-}
-
-/* ========== Slide Back when in view ========== */
 .fade-corner.in-view .l1 {
-  transform: rotate(10deg) translateX(0);
+    transform: rotate(10deg) translateX(0);
 }
 
 .fade-corner.in-view .l2 {
-  transform: rotate(5deg) translateX(0);
+    transform: rotate(5deg) translateX(0);
 }
 
 .fade-corner.in-view .r1 {
-  transform: rotate(-10deg) translateX(0);
+    transform: rotate(-10deg) translateX(0);
 }
 
 .fade-corner.in-view .r2 {
-  transform: rotate(-5deg) translateX(0);
+    transform: rotate(-5deg) translateX(0);
+}
+
+
+/* ================= Counters ================= */
+
+.counter-box .counter {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.label-middle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sub-label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #aaa;
+}
+
+
+/* ================= Title Fade ================= */
+
+.line {
+    display: inline-block;
+    opacity: 0;
+    color: gray;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.line.in-view {
+    opacity: 1;
+    color: white;
+    transform: translateY(0);
+}
+
+
+/* ================= Carousel ================= */
+
+.testimonial-carousel {
+    margin-top: 150px;
+}
+
+.carousel-heading {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.carousel-subheading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.carousel-subhead {
+    color: white;
+}
+
+.carousel-subheading span {
+    color: white;
+}
+
+.carousel-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.carousel-arrow {
+    font-size: 2rem;
+    background: none;
+    color: #00ccff;
+    border: none;
+    cursor: pointer;
+}
+
+.video-phone-frame {
+    border: 2px solid transparent;
+    border-radius: 30px;
+    width: clamp(180px, 20vw, 280px);
+    /* min 180px, fluid with vw, max 280px */
+    height: clamp(320px, 60vh, 600px);
+    /* min 320px, fluid, max 600px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    /* keep centered */
+}
+
+.video-phone-frame video {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.testimonial-meta {
+    margin-top: 30px;
+}
+
+.testimonial-quote {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.author-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #00ccff;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: 600;
+    margin: 0;
+}
+
+.role {
+    font-size: 0.75rem;
+    color: #888;
+    margin: 0;
+}
+
+
+/* ================= Responsive ================= */
+
+
+/* Tablets (<1240px) */
+
+@media (max-width: 1240px) {
+    .testimonial-header h2 {
+        font-size: 1.5rem;
+    }
+    .counter-box .counter {
+        font-size: 2rem;
+    }
+    .label {
+        font-size: 0.95rem;
+    }
+    .label-middle {
+        font-size: 1rem;
+    }
+    .sub-label {
+        font-size: 1.4rem;
+    }
+    .testimonial-counter-row {
+        gap: 30px;
+    }
+    .corner-img-container {
+        display: none;
+    }
+    .video-phone-frame {
+        width: clamp(160px, 25vw, 240px);
+        height: clamp(300px, 55vh, 520px);
+    }
+}
+
+
+/* Tablets & Mobiles (<768px) */
+
+@media (max-width: 768px) {
+    .testimonial-header h2 {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+    }
+    .counter-box .counter {
+        font-size: 1.5rem;
+    }
+    .label {
+        font-size: 0.85rem;
+    }
+    .label-middle {
+        font-size: 0.9rem;
+    }
+    .sub-label {
+        font-size: 1.2rem;
+    }
+    .testimonial-counter-row {
+        gap: 20px;
+        justify-content: center;
+    }
+    /* Hide corner images for mobile */
+    .corner-img-container {
+        display: none;
+    }
+    .video-phone-frame {
+        width: clamp(140px, 40vw, 200px);
+        height: clamp(260px, 50vh, 420px);
+    }
+}
+
+
+/* Small Mobile (<480px) */
+
+@media (max-width: 480px) {
+    .testimonial-header h2 {
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+    }
+    .counter-box .counter {
+        font-size: 1.2rem;
+    }
+    .label {
+        font-size: 0.75rem;
+    }
+    .label-middle {
+        font-size: 0.8rem;
+    }
+    .sub-label {
+        font-size: 1rem;
+    }
+    .testimonial-counter-row {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .video-phone-frame {
+        width: 70vw;
+        height: auto;
+        aspect-ratio: 9 / 16;
+        /* ensures phone-like vertical ratio */
+    }
 }
