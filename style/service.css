@@ -48,7 +48,7 @@
 .service-info {
     font-size: small;
     width: 95%;
-    text-align: justify;
+    text-align: center;
     /* justified */
     margin: 0 auto;
     color: #ddd;
@@ -188,7 +188,23 @@
     font-size: 0.9rem;
 }
 
+
+/* Desktop CTA centering */
+
+.bottom-cta {
+    display: flex;
+    justify-content: center;
+    /* centers horizontally */
+    align-items: center;
+    /* vertically aligns if needed */
+    width: 100%;
+}
+
+
+/* Ensure button stays inline-block */
+
 .cta-button {
+    display: inline-block;
     z-index: 3;
 }
 

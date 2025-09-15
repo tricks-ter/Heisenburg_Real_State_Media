@@ -4,26 +4,20 @@
     padding: 5rem 2rem;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    background: transparent;
-    /* keep starfield bg */
+    background: linear-gradient(to bottom, #0e0e0e, #1b1b1b);
     position: relative;
-    z-index: 1;
+    z-index: 3;
+}
+
+.featured-header p {
+    font-size: 1rem;
+    color: white;
 }
 
 .featured-header h2 {
-    font-size: 1.2rem;
-    color: white;
-    z-index: 2;
-    position: relative;
-}
-
-.featured-header h3 {
     color: gray;
     font-size: 2rem;
     margin: 1rem 0;
-    z-index: 2;
-    position: relative;
-    line-height: 1.3;
 }
 
 .feature-subheading {
@@ -37,7 +31,6 @@
     gap: 1rem;
     flex-wrap: wrap;
     z-index: 3;
-    position: relative;
 }
 
 .tab-btn {
@@ -56,11 +49,13 @@
     color: #000;
 }
 
+
+/* === Featured Content Layout === */
+
 .featured-content {
     display: flex;
-    flex-direction: column;
-    /* stack vertically */
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
     position: relative;
@@ -68,36 +63,57 @@
 }
 
 
-/* === Video Wrappers === */
+/* === Vertical & Agent Videos - TikTok Style Frames === */
 
-.featured-content.vertical-layout .video-wrapper,
-.featured-content.agent-layout .video-wrapper {
-    width: 90%;
-    max-width: 900px;
-    height: 85vh;
-    /* almost full screen height */
-    border-radius: 18px;
+.featured-content.default-layout .video-wrapper {
+    width: 18vw;
+    /* thin vertical frame */
+    height: 80vh;
+    /* full height */
+    border-radius: 20px;
     background: #000;
     overflow: hidden;
+    border: 2px solid transparent;
     box-shadow: 0 0 20px rgba(77, 201, 255, 0.15);
 }
 
-.featured-content.horizontal-layout .video-wrapper {
-    width: 90%;
-    max-width: 1000px;
-    height: 60vh;
-    /* shorter rectangle */
-    border-radius: 16px;
-    background: #000;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(30, 159, 216, 0.1);
-}
-
-.video-wrapper video {
+.featured-content.default-layout .video-wrapper video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
+}
+
+
+/* === Horizontal Videos - Dual Column Layout === */
+
+.featured-content.dual-column-layout {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.dual-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dual-column .video-wrapper {
+    width: 40vw;
+    /* big rectangle on desktop */
+    height: 60vh;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    box-shadow: 0 0 15px rgba(30, 159, 216, 0.1);
+}
+
+.dual-column .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -112,33 +128,62 @@
 }
 
 
-/* === Responsive === */
+/* === Responsive Layouts === */
+
+@media (max-width: 1024px) {
+    .dual-column .video-wrapper {
+        width: 45vw;
+        height: 50vh;
+    }
+}
 
 @media (max-width: 768px) {
-    .featured-header h3 {
+    /* Stack all videos vertically */
+    .featured-content {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1.5rem !important;
+    }
+    /* Vertical / Agent videos - taller like TikTok */
+    .featured-content.default-layout .video-wrapper {
+        width: 90%;
+        height: 70vh;
+        margin: 0 auto;
+    }
+    /* Horizontal videos - slightly smaller rectangles */
+    .dual-column {
+        width: 100%;
+        gap: 1.5rem;
+    }
+    .dual-column .video-wrapper {
+        width: 95%;
+        height: 45vh;
+    }
+    .featured-header h2 {
         font-size: 1.5rem;
-    }
-    .featured-content.vertical-layout .video-wrapper,
-    .featured-content.agent-layout .video-wrapper {
-        height: 75vh;
-    }
-    .featured-content.horizontal-layout .video-wrapper {
-        height: 50vh;
     }
 }
 
 @media (max-width: 480px) {
     .featured-header h2 {
-        font-size: 1rem;
-    }
-    .featured-header h3 {
         font-size: 1.2rem;
     }
-    .featured-content.vertical-layout .video-wrapper,
-    .featured-content.agent-layout .video-wrapper {
-        height: 70vh;
+    .featured-header p {
+        font-size: 0.9rem;
     }
-    .featured-content.horizontal-layout .video-wrapper {
-        height: 45vh;
+    /* Vertical / Agent videos - take most of screen height */
+    .featured-content.default-layout .video-wrapper {
+        width: 95%;
+        height: 75vh;
+        margin: 0 auto;
+    }
+    /* Horizontal videos - keep rectangular but large enough */
+    .dual-column .video-wrapper {
+        width: 95%;
+        height: 50vh;
+    }
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
     }
 }
