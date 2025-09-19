@@ -189,20 +189,28 @@
 
 /* === Extra Small Mobile (<480px) === */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 610px) {
+    body {
+        padding-left: 21px;
+        padding-right: 21px;
+    }
     .hero {
-        padding-top: 30%;
+        padding-top: 35%;
+        padding-bottom: 0px !important;
     }
     .hero_memo {
         width: 95%;
         padding: 0 8px;
     }
     .hero_title {
-        font-size: 1.2rem;
-        line-height: 1.1;
+        font-size: 15px;
+        line-height: auto !important;
+        font-weight: 500 !important;
     }
     .hero_para {
-        font-size: 0.8rem;
+        font-size: 8px;
+        line-height: auto !important;
+        font-weight: 400 !important;
     }
     .trust-row {
         flex-direction: column;
@@ -219,15 +227,21 @@
         height: 30px;
     }
     .trust-text {
-        font-size: 0.7rem;
+        font-size: 10px !important;
+        font-weight: 300 !important;
+        text-align: center !important;
     }
     .hero-buttons {
         flex-direction: column;
         gap: 0.4rem;
+        width: 70vw;
+        border-radius: 5px;
     }
     .hero-btn {
-        width: 100%;
-        padding: 0.45rem 0.8rem;
-        font-size: 0.75rem;
+        padding: 14px 25px;
+        font-size: 14px;
+        font-weight: 500 !important;
+        width: 75vw;
+        border-radius: 10px;
     }
 }

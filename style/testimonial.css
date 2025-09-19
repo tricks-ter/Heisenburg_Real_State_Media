@@ -1,7 +1,7 @@
 /* ================= Base Styles ================= */
 
 .testimonial-section {
-    padding: 60px 20px;
+    margin: 20px 0;
     background-color: #0d0d0d;
     color: white;
     text-align: center;
@@ -143,7 +143,7 @@
 /* ================= Carousel ================= */
 
 .testimonial-carousel {
-    margin-top: 150px;
+    margin-top: 10%;
 }
 
 .carousel-heading {
@@ -315,24 +315,24 @@
 
 @media (max-width: 480px) {
     .testimonial-header h2 {
-        font-size: 1rem !important;
+        font-size: 10px !important;
         line-height: 1.2 !important;
     }
     .counter-box .counter {
-        font-size: 1.2rem;
+        font-size: 12px;
     }
     .label {
-        font-size: 0.75rem;
+        font-size: 6px;
+        margin-bottom: 5px;
     }
     .label-middle {
-        font-size: 0.8rem;
+        font-size: 8px;
     }
     .sub-label {
-        font-size: 1rem;
+        font-size: 9px;
     }
     .testimonial-counter-row {
         gap: 15px;
-        flex-direction: column;
         align-items: center;
     }
     .video-phone-frame {
@@ -340,5 +340,11 @@
         height: auto;
         aspect-ratio: 9 / 16;
         /* ensures phone-like vertical ratio */
+    }
+    .line.in-view {
+        opacity: 1;
+        color: white;
+        transform: translateY(0);
+        font-weight: 500;
     }
 }

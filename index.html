@@ -25,7 +25,7 @@
 <body>
 
     <!-- Floating Star Background -->
-    <canvas id="starfield"></canvas>
+    <!--<canvas id="starfield"></canvas> -->
 
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
@@ -38,9 +38,9 @@
 
             <!-- Nav Links -->
             <div class="nav-links">
-                <a href="#">Our Works</a>
-                <a href="#">Services</a>
-                <a href="#">Reviews</a>
+                <a href="#featured-projects">Our Works</a>
+                <a href="#services-section">Services</a>
+                <a href="#reviews">Reviews</a>
             </div>
 
             <!-- CTA -->
@@ -166,7 +166,7 @@
             </div>
         </div>
 
-        <div class="testimonial-carousel">
+        <div class="testimonial-carousel" id="reviews">
             <h3 class="carousel-heading">Client Testimonials</h3>
             <h4 class="carousel-subheading">Hear what they’re <span class="carousel-subhead"><br>Saying about us</span></h4>
 
@@ -278,56 +278,105 @@
         <!-- Enroll Button & Quote (single instance) -->
         <div class="bottom-cta">
             <p class="cta-note">
-                <button class="cta-button" aria-label="Enroll in personal branding video editing service">ENROLL NOW</button> —
+                <button class="cta-button" aria-label="Enroll in personal branding video editing service">
+            ENROLL NOW
+        </button>
                 <span id="quote">bring your vision to life</span>
             </p>
         </div>
     </section>
     <!-- End of Service Section -->
 
-    <!-- Comparison Section -->
-    <section class="comparison-section" id="why-choose-us">
-        <div class="comparison-heading">
-            <p class="subheading">why choose us</p>
-            <h2 class="main-heading">Know what <br /><span>we do differently</span></h2>
+    <!-- ================= Comparison Section ================= -->
+    <section id="comparison" class="comparison">
+        <!-- Heading -->
+        <div class="comparison__heading">
+            <p class="comparison__subheading">why choose us</p>
+            <h2 class="comparison__title">
+                Know what <br /><span class="comparison__title--highlight">we do differently</span>
+            </h2>
         </div>
 
-        <div class="comparison-columns">
+        <!-- Columns -->
+        <div class="comparison__columns">
             <!-- Left Card -->
-            <div class="card">
-                <h2>Heisenburg's</h2>
-                <h6>Real Estate Media Lab</h6>
-                <p><span class="check">✔</span><b>Specialized in Real Estate Video Editing</b><br>We focus exclusively on real estate videos, ensuring industry-specific expertise for better results.</p>
-                <p><span class="check">✔</span><b>Full In-house Team of Experts</b><br>A dedicated team delivering high-quality content quickly and reliably.</p>
-                <p><span class="check">✔</span><b>Fast, Reliable Turnaround</b><br>We guarantee 24–48 hour edits to meet tight deadlines.
-                </p>
-                <p><span class="check">✔</span><b>We optimize videos for conversions, not just views.</b><br>Proven, results-driven content formats.</p>
-                <p><span class="check">✔</span><b>24/7 Support, Anytime You Need Us</b><br>Prompt responses and solutions whenever you need them.</p>
+            <div id="comparison-left" class="comparison__card comparison__card--left">
+                <h2 class="comparison__card-title">Heisenburg's</h2>
+                <h6 class="comparison__card-subtitle">Real Estate Media Lab</h6>
 
-                <div class="bonus">
-                    <p class="highlight">🎁 Bonuses You Get With Us:</p>
-                    <p><span class="check">✔</span> Free 1-on-1 Consultancy On Shooting</p>
-                    <p><span class="check">✔</span> Free Sample Edits</p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--check">✔</span>
+                    <b>Specialized in Real Estate Video Editing</b><br> We focus exclusively on real estate videos, ensuring industry-specific expertise for better results.
+                </p>
+
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--check">✔</span>
+                    <b>Full In-house Team of Experts</b><br> A dedicated team delivering high-quality content quickly and reliably.
+                </p>
+
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--check">✔</span>
+                    <b>Fast, Reliable Turnaround</b><br> We guarantee 24–48 hour edits to meet tight deadlines.
+                </p>
+
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--check">✔</span>
+                    <b>We optimize videos for conversions, not just views.</b><br> Proven, results-driven content formats.
+                </p>
+
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--check">✔</span>
+                    <b>24/7 Support, Anytime You Need Us</b><br> Prompt responses and solutions whenever you need them.
+                </p>
+
+                <div class="comparison__bonus">
+                    <p class="comparison__bonus-title">🎁 Bonuses You Get With Us:</p>
+                    <p class="comparison__bonus-item">
+                        <span class="comparison__icon comparison__icon--check">✔</span> Free 1-on-1 Consultancy On Shooting
+                    </p>
+                    <p class="comparison__bonus-item">
+                        <span class="comparison__icon comparison__icon--check">✔</span> Free Sample Edits
+                    </p>
                 </div>
             </div>
 
             <!-- Right Card -->
-            <div class="card right-card">
-                <h2>With Freelancer Editors</h2>
-                <p><span class="cross">✘</span> Unreliable Quality and Timelines</p>
-                <p><span class="cross">✘</span> Lack of Real Estate Expertise</p>
-                <p><span class="cross">✘</span> Inconsistent Editing Quality</p>
-                <p><span class="cross">✘</span> Lack of Strategic Understanding of Editing</p>
-                <p><span class="cross">✘</span> No Long-Term Commitment</p>
-                <p><span class="cross">✘</span> Limited Revisions and Poor Engagement</p>
-                <p><span class="cross">✘</span> Ghosting and Lack of Communication</p>
-                <p><span class="cross">✘</span> Quality Control Issues</p>
-                <p><span class="cross">✘</span> Potential Communication Barriers</p>
+            <div id="comparison-right" class="comparison__card comparison__card--right">
+                <h2 class="comparison__card-title">With Freelancer Editors</h2>
+
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Unreliable Quality and Timelines
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Lack of Real Estate Expertise
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Inconsistent Editing Quality
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Lack of Strategic Understanding of Editing
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> No Long-Term Commitment
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Limited Revisions and Poor Engagement
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Ghosting and Lack of Communication
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Quality Control Issues
+                </p>
+                <p class="comparison__item">
+                    <span class="comparison__icon comparison__icon--cross">✘</span> Potential Communication Barriers
+                </p>
             </div>
         </div>
 
-        <div class="cta-wrapper">
-            <a href="#book-a-call" class="cta-button">Book A 30-min Call 💬</a>
+        <!-- Call to Action -->
+        <div class="comparison__cta">
+            <a href="#book-a-call" class="comparison__cta-button">Book A 30-min Call 💬</a>
         </div>
     </section>
 

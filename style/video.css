@@ -170,26 +170,42 @@
 
 /* === Mobile Adjustments === */
 
-@media screen and (max-width: 768px) {
-    .video-section {
-        padding: 3rem 0.5rem;
+@media screen and (max-width: 450px) {
+    /* Hide extra elements on small screens */
+    .billboard-header,
+    .billboard-controls,
+    .video-label-outside,
+    .custom-play-button {
+        display: none !important;
     }
     .billboard-frame {
-        padding: 1rem;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
     }
-    .billboard-title {
-        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    .video-section {
+        padding: 0 !important;
+        margin-top: 20px;
     }
-    .control-dot {
-        width: clamp(6px, 3vw, 10px);
-        height: clamp(6px, 3vw, 10px);
+    .video-container {
+        width: 100%;
+        /* Full section width */
+        border-radius: 12px;
+        /* Rounded corners */
+        box-shadow: none;
+        overflow: hidden;
     }
-    .custom-play-button {
-        width: clamp(40px, 15vw, 70px);
-        height: clamp(40px, 15vw, 70px);
+    .video-frame {
+        width: 100%;
+        aspect-ratio: 16/9;
+        /* Maintain video ratio */
+        border-radius: 12px;
     }
-    .video-label-outside {
-        text-align: center;
-        font-size: clamp(0.7rem, 2vw, 0.85rem);
+    .video-frame video {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
     }
 }

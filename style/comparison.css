@@ -1,21 +1,23 @@
-/* ------------------ Comparison Section ------------------ */
+/* ------------------ Base ------------------ */
 
 body {
     font-family: 'Poppins', sans-serif;
     background: transparent;
     margin: 0;
-    padding: 40px;
     color: #fff;
 }
 
-.comparison-section {
+
+/* ------------------ Section ------------------ */
+
+.comparison {
     padding: 50px 20px;
     background: transparent;
     position: relative;
     text-align: center;
 }
 
-.comparison-heading .subheading {
+.comparison__subheading {
     text-transform: uppercase;
     font-size: 12px;
     color: #ffffff;
@@ -23,7 +25,7 @@ body {
     letter-spacing: 1px;
 }
 
-.comparison-heading .main-heading {
+.comparison__title {
     font-size: 28px;
     font-weight: bold;
     line-height: 1.3;
@@ -31,21 +33,21 @@ body {
     color: #999;
 }
 
-.comparison-heading span {
+.comparison__title--highlight {
     color: #ffffff;
 }
 
 
-/* Desktop layout */
+/* ------------------ Columns ------------------ */
 
-.comparison-columns {
+.comparison__columns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
 }
 
-.card {
+.comparison__card {
     background: linear-gradient(160deg, #293c47 0%, #294f5c 100%);
     border-radius: 24px;
     padding: 30px;
@@ -56,11 +58,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-.card:hover {
+.comparison__card:hover {
     transform: translateY(-5px);
 }
 
-.card h2 {
+.comparison__card-title {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -68,26 +70,37 @@ body {
     line-height: 1.4;
 }
 
-.card p {
+.comparison__card-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.comparison__item {
     margin: 14px 0;
     font-size: 15px;
     line-height: 1.6;
     color: #e5f4f4;
 }
 
-.check {
+.comparison__icon {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.comparison__icon--check {
     color: #2ecc71;
-    font-weight: bold;
-    margin-right: 8px;
 }
 
-.cross {
+.comparison__icon--cross {
     color: #ff4c4c;
-    font-weight: bold;
-    margin-right: 8px;
 }
 
-.bonus {
+
+/* ------------------ Bonus ------------------ */
+
+.comparison__bonus {
     background: rgba(0, 180, 120, 0.1);
     padding: 16px;
     border-radius: 14px;
@@ -95,22 +108,25 @@ body {
     font-size: 0.95em;
 }
 
-.bonus p {
+.comparison__bonus-item {
     margin: 8px 0;
     color: #c7f7e3;
 }
 
-.highlight {
+.comparison__bonus-title {
     color: #00ff99;
     font-weight: bold;
 }
 
-.cta-wrapper {
+
+/* ------------------ CTA ------------------ */
+
+.comparison__cta {
     margin-top: 60px;
     text-align: center;
 }
 
-.cta-button {
+.comparison__cta-button {
     display: inline-block;
     padding: 14px 28px;
     border-radius: 30px;
@@ -122,46 +138,47 @@ body {
     transition: background 0.3s ease;
 }
 
-.right-card {
-    margin-top: 30px;
-    background-color: #ff3700;
-}
-
-.cta-button:hover {
+.comparison__cta-button:hover {
     background: linear-gradient(90deg, #0072ff, #00c6ff);
 }
 
 
-/* ------------------ Mobile Optimizations ------------------ */
+/* ------------------ Card Modifiers ------------------ */
+
+.comparison__card--right {
+    margin-top: 30px;
+    background-color: #ff3700;
+}
+
+
+/* ------------------ Responsive ------------------ */
 
 @media (max-width: 768px) {
-    .comparison-columns {
+    .comparison__columns {
         flex-direction: column;
-        /* stack cards vertically */
         gap: 20px;
         align-items: center;
     }
-    .card {
+    .comparison__card {
         width: 90% !important;
         height: auto !important;
-        /* let card height adjust to content */
         padding: 20px;
     }
-    .card h2 {
+    .comparison__card-title {
         font-size: 18px;
     }
-    .card p {
+    .comparison__item {
         font-size: 14px;
         line-height: 1.5;
     }
-    .bonus {
+    .comparison__bonus {
         font-size: 0.9em;
         padding: 12px;
     }
-    .cta-wrapper {
+    .comparison__cta {
         margin-top: 40px;
     }
-    .cta-button {
+    .comparison__cta-button {
         width: 80%;
         max-width: 280px;
         font-size: 14px;
@@ -170,28 +187,48 @@ body {
 }
 
 @media (max-width: 480px) {
-    .comparison-heading .main-heading {
+    .comparison__title {
         font-size: 22px;
+        font-weight: 400;
         line-height: 1.2;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
-    .comparison-heading .subheading {
+    .comparison__subheading {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .comparison__card-subtitle {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    .comparison__card {
+        padding: 16px;
+        font-weight: 400;
+    }
+    .comparison__card-title {
+        font-size: 18px;
+        margin-bottom: 0 !important;
+    }
+    b {
+        font-size: 10px;
+        padding-left: 0;
+    }
+    .comparison__item {
+        font-size: 9px;
+        text-align: justify;
+    }
+    .comparison__bonus-title {
         font-size: 11px;
     }
-    .card {
-        padding: 16px;
-    }
-    .card h2 {
-        font-size: 16px;
-    }
-    .card p {
-        font-size: 13px;
-    }
-    .bonus {
-        padding: 10px;
+    .comparison__bonus {
+        padding: 9px;
         font-size: 0.85em;
     }
-    .cta-button {
+    .comparison__bonus-item {
+        font-size: 10px;
+        margin: 4px 0;
+    }
+    .comparison__cta-button {
         font-size: 13px;
         padding: 10px 20px;
     }

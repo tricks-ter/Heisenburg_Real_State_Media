@@ -1,4 +1,4 @@
-// === Floating Starfield Animation ===
+/*// === Floating Starfield Animation ===
     const canvas = document.getElementById("starfield");
     const ctx = canvas.getContext("2d");
 
@@ -52,3 +52,4 @@
     resizeCanvas();
     createStars();
     animateStars();
+    */
